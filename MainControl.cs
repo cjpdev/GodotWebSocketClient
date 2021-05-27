@@ -28,7 +28,7 @@ public class MainControl : Control
     private string cert = ""; //"res://cert.crt";
 
     [Export]
-    string webSocketURL = "ws://some_server.com:8080"; // For secure SSL use "wss://"
+    string webSocketURL = "wss://localhost.com:8080"; // For none secure use "ws://"
 
     [Export]
     bool bVerifySsl = false;
