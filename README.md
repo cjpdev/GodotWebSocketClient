@@ -102,7 +102,7 @@ optionsHttpServer = {
 
 A very basic chat server, every client that connects to the server can chat with every one else. 
 The client sending the message recive their message back from the server as an echo test.
-* Works with the my GodotWebSocketClient example:
+* Works with my GodotWebSocketClient example:
 
 <img src="https://github.com/cjpdev/GodotWebSocketClient/blob/main/image.png" alt="modile app" width="400"/>
 
