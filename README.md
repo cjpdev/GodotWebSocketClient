@@ -27,11 +27,14 @@ This is a secure server, so the WebSocketClient must connect using the protocal 
  * The NodeJS server will send a certificate to the Godot client.
 
 ```javascript
-const fs = require('fs');
-const https = require('https');
-const webSocket = require('ws');
+//ES6 
+'use strict';
 
-optionsHttpServer = {
+import fs  from 'fs';
+import https from 'https';
+import webSocket from 'ws';
+
+const optionsHttpServer = {
   cert: fs.readFileSync('./cert/cert.pem'),
   key: fs.readFileSync('./cert/key.pem'),
 };
@@ -40,7 +43,7 @@ const httpsServer = https.createServer(optionsHttpServer, function (req, res) {
   console.log('Client https connection.');
 });
 
-optionsSocket = {
+const optionsSocket = {
   server: httpsServer
 };
 
@@ -101,12 +104,17 @@ A very basic chat server, every client that connects to the server can chat with
 The client sending the message recive their message back from the server as an echo test.
 * Works with the my GodotWebSocketClient example:
 
-```javascript
-const fs = require('fs');
-const https = require('https');
-const webSocket = require('ws');
+<img src="https://github.com/cjpdev/GodotWebSocketClient/blob/main/image.png" alt="modile app" width="400"/>
 
-options = {
+```javascript
+//ES6 
+'use strict';
+
+import fs  from 'fs';
+import https from 'https';
+import webSocket from 'ws';
+
+const options = {
   cert: fs.readFileSync('./cert/cert.pem'),
   key: fs.readFileSync('./cert/key.pem'),
   //rejectUnauthorized: true,
@@ -117,7 +125,7 @@ const httpsServer = https.createServer(options, function (req, res) {
   console.log('Client https connection.');
 });
 
-optionsSocket = {
+const optionsSocket = {
   server: httpsServer,
   clientTracking: true
 };
