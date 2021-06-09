@@ -1,8 +1,11 @@
-const fs = require('fs');
-const https = require('https');
-const webSocket = require('ws');
+//ES6 
+'use strict';
 
-options = {
+import fs  from 'fs';
+import https from 'https';
+import webSocket from 'ws';
+
+const options = {
   cert: fs.readFileSync('./cert/cert.pem'),
   key: fs.readFileSync('./cert/key.pem'),
   //rejectUnauthorized: true,
@@ -13,7 +16,7 @@ const httpsServer = https.createServer(options, function (req, res) {
   console.log('Client https connection.');
 });
 
-optionsSocket = {
+const optionsSocket = {
   server: httpsServer,
   clientTracking: true
 };
