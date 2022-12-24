@@ -216,7 +216,7 @@ public class MainControl : Control
 
     public void OnConnectionClosed (bool wasCleanClose)
     {
-        GD.Print("Connection closed. was clean cloase." + wasCleanClose.ToString());
+        GD.Print("Connection closed. was clean close." + wasCleanClose.ToString());
     }
 
     public void OnConnectionError()
